@@ -1,11 +1,11 @@
 environments:
-  - name: dev
+  - name: cicd-dev
     endpoints:
       production:
         url: https://dev.petstore.com
       sandbox:
         url: https://sandbox.dev.petstore.com
-  - name: prod
+  - name: cicd-prod
     endpoints:
       production:
         url: https://prod.petstore.com
