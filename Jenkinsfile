@@ -23,6 +23,7 @@ pipeline {
                 sh """#!/bin/bash
                 ENVCOUNT=\$(apictl list envs --format {{.}} | wc -l)
                 if [ "\$ENVCOUNT" == "0" ]; then
+
                     ./apictl add-env -e cicd-prod --apim https://localhost:9444
                 fi
                 """
@@ -34,6 +35,7 @@ pipeline {
                 sh """
                 ./apictl login cicd-prod -u admin -p admin
                 ./apictl vcs deploy -e cicd-prod
+
                 """
             }
         }

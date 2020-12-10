@@ -1,0 +1,18 @@
+environments:
+  - name: cicd-dev
+    endpoints:
+      production:
+        url: https://dev.petstore.com
+      sandbox:
+        url: https://sandbox.dev.petstore.com
+  - name: cicd-prod
+    endpoints:
+      production:
+        url: https://prod.petstore.com
+      sandbox:
+        url: https://sandbox.prod.petstore.com
+        
+deploy:
+  import:
+    update: true
+    preserveProvider: true
